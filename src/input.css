@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	font-family: 'Cormorant Garamond', serif;
+	background-color: #efefef;
+	text-decoration: none;
+}
+
+.hero-img {
+	background-image: url('../assets/greg-rivers-rChFUMwAe7E-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
