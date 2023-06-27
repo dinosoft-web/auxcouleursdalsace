@@ -21,13 +21,13 @@
 			<!-- Nav bar -->
 			<nav class="flex justify-between items-center space-x-8">
 				<!-- Logo & Features Container -->
-				<div class="flex justify-start space-x-5">
+				<div class="flex justify-start items-center space-x-5">
 					<div class="w-20">
-						<!-- <img src="../assets/logo.png" alt="" id="logo" /> -->
+						<img src="../assets/logo.png" alt="" id="logo" />
 					</div>
 
 					<div
-						class="font-serif text-lg uppercase text-main pr-4 border-r-2 border-secondary h-auto"
+						class="font-serif text-lg uppercase text-main pr-4 border-r-2 border-secondary h-7"
 					>
 						<a href="index.html">La maison</a>
 					</div>
@@ -80,7 +80,7 @@
 						data-target="panel-2"
 					>
 						<div class="py-5 text-lg uppercase" data-target="panel-2">
-							La table d'hôte
+							Les prestations
 						</div>
 					</div>
 
@@ -110,37 +110,53 @@
 				>
 					<!-- Panel 1 -->
 					<div
-						class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:w-[90%] panel panel-1"
+						class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:items-center md:w-[90%] panel panel-1"
 					>
 						<!-- Text Flex Container -->
-						<div class="flex flex-col space-y-10 w-[38%]">
+						<div class="flex flex-col space-y-8 w-[43%]">
 							<h2 class="font-serif text-4xl uppercase">
-								Une maison pensée pour le bien être
+								Bienvenue Aux Couleurs d’Alsace
 							</h2>
-							<p class="font-body italic">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Repellat dolor est in, ullam porro nisi ut explicabo illum
-								assumenda, quibusdam, error consectetur neque sunt
-								necessitatibus quod dignissimos eos libero nemo.
-							</p>
-							<p class="font-body">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
-								ipsa laborum eum sunt, voluptatum, blanditiis, reprehenderit
-								quae corporis accusamus quibusdam laboriosam praesentium. Rerum
-								libero nemo suscipit reiciendis cupiditate doloribus sit,
-								inventore neque doloremque impedit quos. Aspernatur facilis,
-								quibusdam odio, quasi tempore reprehenderit sequi dolorum quae
-								provident voluptate deleniti, autem tempora eveniet. Accusamus
-								rem placeat nam asperiores nihil at saepe doloremque
-								necessitatibus? Illo aperiam excepturi suscipit iure!
-							</p>
+							<div class="flex flex-col space-y-2">
+								<p class="font-body italic">
+									Valérie et Alain vous accueillent dans leur maison Aux
+									Couleurs d’Alsace, en toute simplicité. Notre maison est un
+									véritable lieu de vie, réservant à nos hôtes un accueil
+									personnalisé, chaleureux et convivial.
+								</p>
+								<p class="font-body italic">
+									Située à 11Km au Sud de Strasbourg, notre villa dispose d’un
+									environnement calme, arboré et intime.
+								</p>
+							</div>
+
+							<div class="flex flex-col space-y-2">
+								<p class="font-body">
+									La maison Aux Couleurs d’Alsace dispose de 3 grandes chambres
+									d’hôtes chacune équipée d’une salle de bain privative.
+								</p>
+								<p class="font-body">
+									Dotée d’un espace de vie commun de 80 m2, nos hôtes pourront
+									prendre leur petit déjeuner dans notre salle à manger à la
+									décoration chaleureuse qui mêle le bois à des tons colorés et
+									des objets d’ici et d’ailleurs. L’espace salon invite à la
+									détente et au plaisir pour y lire ou prendre l’apéritif après
+									une journée de visite bien rythmée.
+								</p>
+								<p class="font-body">
+									Aux beaux jours, nos hôtes pourront profiter de la terrasse
+									solarium de 80 m2, équipée de transats, salon de jardin et
+									coin repas située au 1er étage de la maison ainsi que de la
+									piscine extérieure privée et du jardin au RDC.
+								</p>
+							</div>
 						</div>
 						<!-- Image and Features Container -->
 						<div class="flex flex-col space-y-4">
 							<!-- Image Container -->
 							<div class="flex justify-between items-center">
 								<div
-									class="w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
+									class="image-container w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
 									style="background-image: url('../assets/pool-night.jpeg')"
 								></div>
 
@@ -149,6 +165,7 @@
 								>
 									<div class="border-b-2 border-tertiary pb-4">
 										<svg
+											class="arrow-right cursor-pointer"
 											width="45"
 											height="45"
 											viewBox="0 0 45 45"
@@ -168,6 +185,7 @@
 									</div>
 
 									<svg
+										class="arrow-left cursor-pointer"
 										width="45"
 										height="45"
 										viewBox="0 0 45 45"
@@ -536,7 +554,7 @@
 							<!-- Image Container -->
 							<div class="flex justify-between items-center">
 								<div
-									class="w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
+									class="image-container w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
 									style="
 										background-image: url('/assets/sigmund-akfDvDi6Wt4-unsplash.jpg');
 									"
@@ -547,6 +565,7 @@
 								>
 									<div class="border-b-2 border-tertiary pb-4">
 										<svg
+											class="arrow-right cursor-pointer"
 											width="45"
 											height="45"
 											viewBox="0 0 45 45"
@@ -566,6 +585,7 @@
 									</div>
 
 									<svg
+										class="arrow-left cursor-pointer"
 										width="45"
 										height="45"
 										viewBox="0 0 45 45"
@@ -653,7 +673,7 @@
 						<!-- Image and Features Container -->
 						<div class="flex flex-col space-y-4">
 							<!-- Image Container -->
-							<div class="flex justify-between items-center">
+							<div class="image-container flex justify-between items-center">
 								<div
 									class="w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
 									style="
@@ -666,6 +686,7 @@
 								>
 									<div class="border-b-2 border-tertiary pb-4">
 										<svg
+											class="arrow-right cursor-pointer"
 											width="45"
 											height="45"
 											viewBox="0 0 45 45"
@@ -685,6 +706,7 @@
 									</div>
 
 									<svg
+										class="arrow-left cursor-pointer"
 										width="45"
 										height="45"
 										viewBox="0 0 45 45"
@@ -1015,21 +1037,21 @@
 				</div>
 				<!-- Image 1 container -->
 				<div
-					class="absolute top-0 left-0 w-[1050px] h-full bg-cover bg-no-repeat bg-center z-20"
+					class="suite-image absolute top-0 left-0 w-[1050px] h-full bg-cover bg-no-repeat bg-center z-20"
 					style="
 						background-image: url('../assets/mark-champs-Id2IIl1jOB0-unsplash.jpg');
 					"
 				></div>
 				<!-- Image 2 container -->
 				<div
-					class="absolute top-0 left-[230px] w-[1050px] h-full bg-cover bg-no-repeat bg-center z-10"
+					class="suite-image absolute top-0 left-[230px] w-[1050px] h-full bg-cover bg-no-repeat bg-center z-10"
 					style="
 						background-image: url('../assets/francesca-tosolini-w1RE0lBbREo-unsplash.jpg');
 					"
 				></div>
 				<!-- Image 3 container -->
 				<div
-					class="absolute top-0 left-[460px] w-[1050px] h-full bg-cover bg-no-repeat bg-center z-0"
+					class="suite-image absolute top-0 left-[460px] w-[1050px] h-full bg-cover bg-no-repeat bg-center z-0"
 					style="
 						background-image: url('../assets/sidekix-media-8qNuR1lIv_k-unsplash.jpg');
 					"
@@ -1058,7 +1080,7 @@
 		>
 			<!-- Footer Container -->
 			<div class="flex flex-col justify-between items-center space-y-6">
-				<img class="w-[150px]" src="../assets/logo.png" alt="logo" />
+				<img class="w-[150px] h-auto" src="../assets/logo.png" alt="logo" />
 				<!-- Info Container -->
 				<div class="flex flex-col justify-between space-y-3 text-center">
 					<span>5 rue de Bourgogne 67570 OSTWALD</span>
