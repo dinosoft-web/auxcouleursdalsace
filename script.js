@@ -7,22 +7,22 @@ const suiteImages = document.querySelectorAll('.suite-image')
 
 BACKGROUND_IMAGES = [
 	[
-		'../assets/pool-night.jpeg',
-		'../assets/outdoor1.jpg',
-		'../assets/outdoor2.JPG',
-		'../assets/outdoor3.jpg',
+		'./assets/pool-night.jpeg',
+		'./assets/outdoor1.jpg',
+		'./assets/outdoor2.JPG',
+		'./assets/outdoor3.jpg',
 	],
 	[
-		'../assets/pool-night.jpeg',
-		'../assets/outdoor1.jpeg',
-		'../assets/outdoor2.jpeg',
-		'../assets/outdoor3.jpeg',
+		'./assets/pool-night.jpeg',
+		'./assets/outdoor1.jpeg',
+		'./assets/outdoor2.jpeg',
+		'./assets/outdoor3.jpeg',
 	],
 	[
-		'../assets/pool-night.jpeg',
-		'../assets/outdoor1.jpeg',
-		'../assets/outdoor2.jpeg',
-		'../assets/outdoor3.jpeg',
+		'./assets/pool-night.jpeg',
+		'./assets/outdoor1.jpeg',
+		'./assets/outdoor2.jpeg',
+		'./assets/outdoor3.jpeg',
 	],
 ]
 
