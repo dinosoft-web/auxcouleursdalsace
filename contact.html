@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="dist/output.css" rel="stylesheet" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<!-- Nav bar Container -->
+		<section class="container mx-auto my-10 max-w-7xl">
+			<!-- Nav bar -->
+			<nav class="flex justify-between items-center space-x-8">
+				<!-- Logo & Features Container -->
+				<div class="flex justify-start items-center space-x-5">
+					<div class="w-20">
+						<img src="./assets/logo.png" alt="" id="logo" />
+					</div>
+
+					<div
+						class="font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
+					>
+						<a href="index.html">La maison</a>
+					</div>
+					<div
+						class="font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
+					>
+						<a href="suites.html">les suites</a>
+					</div>
+					<div class="font-serif text-lg uppercase text-secondary pr-4">
+						<a href="reglement.html">Règlement</a>
+					</div>
+				</div>
+				<!-- Contact and Booking Container -->
+				<div class="flex justify-start space-x-5">
+					<span
+						class="font-serif text-lg uppercase text-main pr-4 border-r-2 border-secondary"
+						><a href="contact.html">Contactez-nous</a>
+					</span>
+					<span class="font-serif text-lg uppercase text-secondary"
+						>Reservez en ligne</span
+					>
+				</div>
+			</nav>
+		</section>
+		<!-- Rules container -->
+		<section
+			class="container mx-auto my-14 max-w-7xl flex flex-col items-center"
+		>
+			<h1 class="uppercase text-3xl text-center">formulaire de contact</h1>
+			<div class="w-3/4 flex flex-col my-16 space-y-8">
+				<div class="flex justify-between">
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname">nom</label>
+						<input
+							class="w-48 py-1 px-4 h-auto bg-white"
+							type="text"
+							placeholder="Entrer votre nom"
+						/>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname">Prénom</label>
+						<input
+							class="w-48 py-1 px-4 h-auto bg-white"
+							type="text"
+							placeholder="Entrer votre prénom"
+						/>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="email">email</label>
+						<input
+							class="w-48 py-1 px-4 h-auto bg-white"
+							type="email"
+							placeholder="Entrer votre email"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col justify-between space-y-1 py-4">
+					<label class="font-body uppercase" for="message">Message</label>
+					<textarea
+						class="bg-white font-body"
+						placeholder="Entrez votre message ici"
+						name="message"
+						id="message"
+						cols="30"
+						rows="15"
+					></textarea>
+				</div>
+				<button
+					class="font-body w-1/2 text-2xl text-white bg-secondary py-2 px-6 rounded-lg uppercase self-center"
+				>
+					envoyer
+				</button>
+			</div>
+		</section>
+		<section
+			class="container mx-auto mt-12 max-w-7xl overflow-hidden flex justify-center"
+		>
+			<!-- Footer Container -->
+			<div class="flex flex-col justify-between items-center space-y-6">
+				<img class="w-[150px] h-auto" src="./assets/logo.png" alt="logo" />
+				<!-- Info Container -->
+				<div class="flex flex-col justify-between space-y-3 text-center">
+					<span>5 rue de Bourgogne 67570 OSTWALD</span>
+					<span>+33 (0)7 50 20 91 76</span>
+				</div>
+				<!-- Socials Container -->
+				<div class="w-full flex justify-between space-x-3 px-12">
+					<svg
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
+							fill="black"
+						/>
+					</svg>
+					<svg
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M3.33334 9.99992C3.33334 6.31802 6.31811 3.33325 10 3.33325H30C33.6818 3.33325 36.6667 6.31802 36.6667 9.99992V29.9999C36.6667 33.6818 33.6818 36.6666 30 36.6666H10C6.31811 36.6666 3.33334 33.6818 3.33334 29.9999V9.99992ZM10 6.66659C8.15906 6.66659 6.66668 8.15897 6.66668 9.99992V29.9999C6.66668 31.8409 8.15906 33.3333 10 33.3333H30C31.841 33.3333 33.3333 31.8409 33.3333 29.9999V9.99992C33.3333 8.15897 31.841 6.66659 30 6.66659H10ZM20 14.9999C17.2385 14.9999 15 17.2384 15 19.9999C15 22.7614 17.2385 24.9999 20 24.9999C22.7615 24.9999 25 22.7614 25 19.9999C25 17.2384 22.7615 14.9999 20 14.9999ZM11.6667 19.9999C11.6667 15.3976 15.3976 11.6666 20 11.6666C24.6023 11.6666 28.3333 15.3976 28.3333 19.9999C28.3333 24.6023 24.6023 28.3333 20 28.3333C15.3976 28.3333 11.6667 24.6023 11.6667 19.9999ZM29.1667 13.3333C30.5473 13.3333 31.6667 12.214 31.6667 10.8333C31.6667 9.45254 30.5473 8.33325 29.1667 8.33325C27.786 8.33325 26.6667 9.45254 26.6667 10.8333C26.6667 12.214 27.786 13.3333 29.1667 13.3333Z"
+							fill="black"
+						/>
+					</svg>
+				</div>
+				<span class="pb-2"
+					>&copy; Aux couleurs d'Alsace - <a href="#">Mentions Légales</a></span
+				>
+			</div>
+		</section>
+	</body>
+</html>
