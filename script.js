@@ -82,7 +82,6 @@ suiteTabs.forEach((tab, index) => {
 suiteImages.forEach((image, index) => {
 	image.addEventListener('click', () => {
 		if (!suiteImages[index].classList.contains('left-0')) {
-			console.log(index)
 			if (index === 1) {
 				suiteImages[index].classList.replace('left-[230px]', 'left-0')
 				suiteImages[index].classList.replace('z-10', 'z-20')
