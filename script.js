@@ -10,6 +10,8 @@ const imageContainers = document.querySelectorAll('.image-container')
 const suiteImageContainers = document.querySelectorAll('.suite-image-container')
 const suiteImages = document.querySelectorAll('.suite-image')
 const heroSuiteImage = document.querySelector('.hero-suite-image')
+const btn = document.getElementById('menu-btn')
+const menu = document.getElementById('menu')
 
 BACKGROUND_IMAGES = [
 	[
@@ -37,7 +39,7 @@ BACKGROUND_IMAGES = [
 ]
 
 SUITE_BACKGROUND_IMAGES = [
-	['./assets/adheesha-paranagama-kOYh8C_xLUQ-unsplash.jpg'],
+	['./assets/bamboo1.jpg', './assets/bamboo2.jpg', './assets/bamboo3.jpg'],
 	[
 		'./assets/ruby1.jpg',
 		'./assets/ruby2.jpg',
@@ -46,17 +48,30 @@ SUITE_BACKGROUND_IMAGES = [
 		'./assets/ruby5.jpg',
 		'./assets/ruby6.jpg',
 	],
-	['./assets/adheesha-paranagama-kOYh8C_xLUQ-unsplash.jpg'],
+	[
+		'./assets/turquoise1.jpg',
+		'./assets/turquoise2.jpg',
+		'./assets/turquoise3.jpg',
+		'./assets/turquoise4.jpg',
+	],
 ]
 
 HERO_SUITE_IMAGE = [
 	'./assets/suite-bamboo-4.png',
 	'./assets/suite-ruby.png',
-	'./assets/suite-turquoise-5.png',
+	'./assets/suite-turquoise.jpg',
 ]
 
 let currentImage = 0
 let suiteCurrentImage = 0
+
+btn.addEventListener('click', navToggle)
+
+function navToggle() {
+	btn.classList.toggle('open')
+	menu.classList.toggle('flex')
+	menu.classList.toggle('hidden')
+}
 
 suiteTabs.forEach((tab, index) => {
 	tab.addEventListener('click', () => {

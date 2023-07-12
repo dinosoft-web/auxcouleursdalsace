@@ -17,47 +17,120 @@
 	</head>
 	<body>
 		<!-- Nav bar Container -->
-		<section class="container mx-auto my-10 max-w-7xl">
+		<section class="relative container mx-auto my-10 max-w-7xl">
 			<!-- Nav bar -->
-			<nav class="flex justify-between items-center space-x-8">
+			<nav class="flex justify-between items-center md:space-x-8">
 				<!-- Logo & Features Container -->
-				<div class="flex justify-start items-center space-x-5">
+				<div class="flex justify-start items-center space-x-5 mx-4 md:mx-0">
 					<div class="w-20">
 						<img src="./assets/logo.png" alt="" id="logo" />
 					</div>
 
 					<div
-						class="font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
+						class="hidden md:block font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
 					>
 						<a href="index.html">La maison</a>
 					</div>
 					<div
-						class="font-serif text-lg uppercase text-main pr-4 border-r-2 border-secondary h-7"
+						class="hidden md:block font-serif text-lg uppercase text-main pr-4 border-r-2 border-secondary h-7"
 					>
 						<a href="suites.html">les suites</a>
 					</div>
-					<div class="font-serif text-lg uppercase text-secondary pr-4">
+					<div
+						class="hidden md:block font-serif text-lg uppercase text-secondary pr-4"
+					>
 						<a href="reglement.html">Règlement</a>
 					</div>
 				</div>
 				<!-- Contact and Booking Container -->
-				<div class="flex justify-start space-x-5">
+				<div class="hidden md:flex justify-start space-x-5">
 					<span
 						class="font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary"
 						><a href="contact.html">Contactez-nous</a></span
 					>
 					<span class="font-serif text-lg uppercase text-secondary"
-						>Reservez en ligne</span
+						><a href="booking.html">Reservez en ligne</a></span
 					>
 				</div>
+				<!-- Hamburger Button -->
+				<div class="md:hidden mx-4">
+					<button
+						id="menu-btn"
+						type="button "
+						class="z-40 block hamburger md:hidden focus:outline-none"
+					>
+						<span class="hamburger-top"></span>
+						<span class="hamburger-middle"></span>
+						<span class="hamburger-bottom"></span>
+					</button>
+				</div>
 			</nav>
-		</section>
-		<!-- Image Section -->
-		<section class="container flex justify-center mx-auto mt-10 mb-4 max-w-7xl">
+			<!-- Mobile Menu -->
 			<div
-				class="hero-suite-image w-[1180px] h-[580px] bg-contain bg-no-repeat bg-center"
-				style="background-image: url('./assets/suite-bamboo-4.png')"
-			></div>
+				id="menu"
+				class="absolute top-0 left-0 bottom-0 hidden flex-col self-end w-full min-h-screen space-y-24 py-4 pt-40 text-xl text-secondary uppercase bg-orange z-30"
+			>
+				<!-- Mobile Menu Title -->
+				<div class="flex flex-col space-y-6 pl-12">
+					<a href="index.html" class="hover:text-black uppercase">la maison</a>
+					<a href="suites.html" class="hover:text-black uppercase"
+						>les suites</a
+					>
+					<a href="reglement.html" class="hover:text-orange uppercase"
+						>règlement</a
+					>
+				</div>
+				<!-- CTA BUTTON -->
+				<button
+					class="px-6 py-2 bg-secondary shadow-lg text-orange rounded-lg self-center hover:scale-110 text-white"
+				>
+					<a class="bg-secondary uppercase font-body" href="booking.html">
+						Réservez votre séjour
+					</a>
+				</button>
+				<!-- Mobile Social Container -->
+				<div class="flex items-end space-x-2 w-52 self-center">
+					<div
+						class="flex space-x-2 mx-auto w-full items-center justify-between"
+					>
+						<div class="group h-10">
+							<a href="https://fb.me/2mrXgeU9t" target="_blank">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
+										fill="black"
+									/>
+								</svg>
+							</a>
+						</div>
+
+						<div class="group h-10">
+							<a href="#" target="_blank">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M3.33334 9.99992C3.33334 6.31802 6.31811 3.33325 10 3.33325H30C33.6818 3.33325 36.6667 6.31802 36.6667 9.99992V29.9999C36.6667 33.6818 33.6818 36.6666 30 36.6666H10C6.31811 36.6666 3.33334 33.6818 3.33334 29.9999V9.99992ZM10 6.66659C8.15906 6.66659 6.66668 8.15897 6.66668 9.99992V29.9999C6.66668 31.8409 8.15906 33.3333 10 33.3333H30C31.841 33.3333 33.3333 31.8409 33.3333 29.9999V9.99992C33.3333 8.15897 31.841 6.66659 30 6.66659H10ZM20 14.9999C17.2385 14.9999 15 17.2384 15 19.9999C15 22.7614 17.2385 24.9999 20 24.9999C22.7615 24.9999 25 22.7614 25 19.9999C25 17.2384 22.7615 14.9999 20 14.9999ZM11.6667 19.9999C11.6667 15.3976 15.3976 11.6666 20 11.6666C24.6023 11.6666 28.3333 15.3976 28.3333 19.9999C28.3333 24.6023 24.6023 28.3333 20 28.3333C15.3976 28.3333 11.6667 24.6023 11.6667 19.9999ZM29.1667 13.3333C30.5473 13.3333 31.6667 12.214 31.6667 10.8333C31.6667 9.45254 30.5473 8.33325 29.1667 8.33325C27.786 8.33325 26.6667 9.45254 26.6667 10.8333C26.6667 12.214 27.786 13.3333 29.1667 13.3333Z"
+										fill="black"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- Feature Section -->
 		<section
@@ -110,10 +183,12 @@
 					<!-- Panel 1 -->
 					<div class="flex flex-col items-center suite-panel panel-1">
 						<div
-							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:w-[90%]"
+							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:items-center md:w-[90%] panel panel-1"
 						>
 							<!-- Text Flex Container -->
-							<div class="flex flex-col space-y-10 w-[38%]">
+							<div
+								class="flex flex-col space-y-8 w-11/12 mx-4 md:w-[43%] md:mx-0"
+							>
 								<h2 class="font-serif text-4xl uppercase">Chambre bambou</h2>
 								<p class="font-body italic">
 									Sa déco en Bambou lui confère une ambiance naturelle et
@@ -131,20 +206,20 @@
 								</p>
 							</div>
 							<!-- Image and Features Container -->
-							<div class="flex flex-col space-y-4">
+							<div class="flex flex-col space-y-4 mt-10 md:mt-0">
 								<!-- Image Container -->
-								<div class="flex justify-between items-center">
+								<div
+									class="flex flex-col justify-between space-y-3 items-center md:flex-row md:space-y-0"
+								>
 									<div
-										class="suite-image-container w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
-										style="
-											background-image: url('./assets/adheesha-paranagama-kOYh8C_xLUQ-unsplash.jpg');
-										"
+										class="image-container w-full h-[200px] md:w-[540px] md:h-[350px] bg-center bg-no-repeat bg-cover relative"
+										style="background-image: url('./assets/bamboo1.jpg')"
 									></div>
 
 									<div
-										class="flex flex-col items-start justifiy-center space-y-4"
+										class="flex flex-row-reverse items-center justify-between w-full md:flex-col md:items-start md:justifiy-center md:space-y-4 md:w-auto"
 									>
-										<div class="border-b-2 border-tertiary pb-4">
+										<div class="md:border-b-2 md:border-tertiary md:pb-4">
 											<svg
 												class="suite-arrow-right cursor-pointer"
 												width="45"
@@ -188,7 +263,9 @@
 							</div>
 						</div>
 						<!-- Features Container -->
-						<div class="flex justify-around py-16 px-4 w-8/12">
+						<div
+							class="flex flex-col justify-around space-y-6 py-6 px-4 w-8/12 md:flex-row md:space-y-0 md:py-16"
+						>
 							<!-- 1st Col -->
 							<div class="flex flex-col justify-start items-start space-y-6">
 								<!-- 1st Item -->
@@ -648,10 +725,12 @@
 					<!-- Panel 2 -->
 					<div class="flex flex-col items-center hidden suite-panel panel-2">
 						<div
-							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:w-[90%]"
+							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:items-center md:w-[90%] panel panel-1"
 						>
 							<!-- Text Flex Container -->
-							<div class="flex flex-col space-y-10 w-[38%]">
+							<div
+								class="flex flex-col space-y-8 w-11/12 mx-4 md:w-[43%] md:mx-0"
+							>
 								<h2 class="font-serif text-4xl uppercase">Suite Rubis</h2>
 								<p class="font-body italic">
 									Sa déco dans les tons rouges, gris et blancs et ses amples
@@ -670,18 +749,20 @@
 								</p>
 							</div>
 							<!-- Image and Features Container -->
-							<div class="flex flex-col space-y-4">
+							<div class="flex flex-col space-y-4 mt-10 md:mt-0">
 								<!-- Image Container -->
-								<div class="flex justify-between items-center">
+								<div
+									class="flex flex-col justify-between space-y-3 items-center md:flex-row md:space-y-0"
+								>
 									<div
-										class="suite-image-container w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
+										class="image-container w-full h-[200px] md:w-[540px] md:h-[350px] bg-center bg-no-repeat bg-cover relative"
 										style="background-image: url('./assets/ruby1.jpg')"
 									></div>
 
 									<div
-										class="flex flex-col items-start justifiy-center space-y-4"
+										class="flex flex-row-reverse items-center justify-between w-full md:flex-col md:items-start md:justifiy-center md:space-y-4 md:w-auto"
 									>
-										<div class="border-b-2 border-tertiary pb-4">
+										<div class="md:border-b-2 md:border-tertiary md:pb-4">
 											<svg
 												class="suite-arrow-right cursor-pointer"
 												width="45"
@@ -724,7 +805,9 @@
 							</div>
 						</div>
 						<!-- Features Container -->
-						<div class="flex justify-around py-16 px-4 w-8/12">
+						<div
+							class="flex flex-col justify-around space-y-6 py-6 px-4 w-8/12 md:flex-row md:space-y-0 md:py-16"
+						>
 							<!-- 1st Col -->
 							<div class="flex flex-col justify-start items-start space-y-6">
 								<!-- 1st Item -->
@@ -1243,10 +1326,12 @@
 					<!-- Panel 3 -->
 					<div class="flex flex-col items-center hidden suite-panel panel-3">
 						<div
-							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:w-[90%]"
+							class="flex flex-col py-5 md:flex-row md:space-x-7 md:justify-between md:items-center md:w-[90%] panel panel-1"
 						>
 							<!-- Text Flex Container -->
-							<div class="flex flex-col space-y-10 w-[38%]">
+							<div
+								class="flex flex-col space-y-8 w-11/12 mx-4 md:w-[43%] md:mx-0"
+							>
 								<h2 class="font-serif text-4xl uppercase">suite turquoise</h2>
 								<p class="font-body italic">
 									Sa déco soignée et épurée avec des ton clairs soulignés par
@@ -1265,20 +1350,20 @@
 								</p>
 							</div>
 							<!-- Image and Features Container -->
-							<div class="flex flex-col space-y-4">
+							<div class="flex flex-col space-y-4 mt-10 md:mt-0">
 								<!-- Image Container -->
-								<div class="flex justify-between items-center">
+								<div
+									class="flex flex-col justify-between space-y-3 items-center md:flex-row md:space-y-0"
+								>
 									<div
-										class="suite-image-container w-[540px] h-[350px] bg-center bg-no-repeat bg-cover relative"
-										style="
-											background-image: url('./assets/adheesha-paranagama-kOYh8C_xLUQ-unsplash.jpg');
-										"
+										class="image-container w-full h-[200px] md:w-[540px] md:h-[350px] bg-center bg-no-repeat bg-cover relative"
+										style="background-image: url('./assets/turquoise1.jpg')"
 									></div>
 
 									<div
-										class="flex flex-col items-start justifiy-center space-y-4"
+										class="flex flex-row-reverse items-center justify-between w-full md:flex-col md:items-start md:justifiy-center md:space-y-4 md:w-auto"
 									>
-										<div class="border-b-2 border-tertiary pb-4">
+										<div class="md:border-b-2 md:border-tertiary md:pb-4">
 											<svg
 												class="suite-arrow-right cursor-pointer"
 												width="45"
@@ -1322,7 +1407,9 @@
 							</div>
 						</div>
 						<!-- Features Container -->
-						<div class="flex justify-around py-16 px-4 w-8/12">
+						<div
+							class="flex flex-col justify-around space-y-6 py-6 px-4 w-8/12 md:flex-row md:space-y-0 md:py-16"
+						>
 							<!-- 1st Col -->
 							<div class="flex flex-col justify-start items-start space-y-6">
 								<!-- 1st Item -->
@@ -1821,15 +1908,19 @@
 		<section class="container mx-auto my-8 max-w-7xl overflow-hidden">
 			<!-- CTA Container -->
 			<div
-				class="flex justify-around items-center space-x-24 w-full h-36 my-4 py-8 border-t-[1px] border-b-[1px] border-secondary"
+				class="flex flex-col justify-center md:justify-around items-center space-y-8 md:space-x-24 w-full h-36 my-4 py-8 md:border-t-[1px] md:border-b-[1px] md:border-secondary md:flex-row md:space-y-0"
 			>
-				<h3 class="font-serif text-4xl uppercase">
+				<h3
+					class="font-serif text-3xl text-center md:text-4xl uppercase md:text-start"
+				>
 					Envie de découvrir l'Alsace ?
 				</h3>
 				<button
 					class="font-body text-2xl text-white bg-secondary py-2 px-6 rounded-lg uppercase"
 				>
-					Réservez votre séjour
+					<a class="bg-secondary font-body" href="booking.html"
+						>Réservez votre séjour</a
+					>
 				</button>
 			</div>
 		</section>
@@ -1847,18 +1938,20 @@
 				</div>
 				<!-- Socials Container -->
 				<div class="w-full flex justify-between space-x-3 px-12">
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 40 40"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
-							fill="black"
-						/>
-					</svg>
+					<a href="https://fb.me/2mrXgeU9t" target="_blank">
+						<svg
+							width="40"
+							height="40"
+							viewBox="0 0 40 40"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
+								fill="black"
+							/>
+						</svg>
+					</a>
 					<svg
 						width="40"
 						height="40"

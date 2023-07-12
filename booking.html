@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="dist/output.css" rel="stylesheet" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<!-- Nav bar Container -->
+		<section class="relative container mx-auto my-10 max-w-7xl">
+			<!-- Nav bar -->
+			<nav class="flex justify-between items-center md:space-x-8">
+				<!-- Logo & Features Container -->
+				<div class="flex justify-start items-center space-x-5 mx-4 md:mx-0">
+					<div class="w-20">
+						<img src="./assets/logo.png" alt="" id="logo" />
+					</div>
+
+					<div
+						class="hidden md:block font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
+					>
+						<a href="index.html">La maison</a>
+					</div>
+					<div
+						class="hidden md:block font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary h-7"
+					>
+						<a href="suites.html">les suites</a>
+					</div>
+					<div
+						class="hidden md:block font-serif text-lg uppercase text-secondary pr-4"
+					>
+						<a href="reglement.html">Règlement</a>
+					</div>
+				</div>
+				<!-- Contact and Booking Container -->
+				<div class="hidden md:flex justify-start space-x-5">
+					<span
+						class="font-serif text-lg uppercase text-secondary pr-4 border-r-2 border-secondary"
+						><a href="contact.html">Contactez-nous</a></span
+					>
+					<span class="font-serif text-lg uppercase text-main"
+						><a href="booking.html">Reservez en ligne</a></span
+					>
+				</div>
+				<!-- Hamburger Button -->
+				<div class="md:hidden mx-4">
+					<button
+						id="menu-btn"
+						type="button "
+						class="z-40 block hamburger md:hidden focus:outline-none"
+					>
+						<span class="hamburger-top"></span>
+						<span class="hamburger-middle"></span>
+						<span class="hamburger-bottom"></span>
+					</button>
+				</div>
+			</nav>
+			<!-- Mobile Menu -->
+			<div
+				id="menu"
+				class="absolute top-0 left-0 bottom-0 hidden flex-col self-end w-full min-h-screen space-y-24 py-4 pt-40 text-xl text-secondary uppercase bg-orange z-30"
+			>
+				<!-- Mobile Menu Title -->
+				<div class="flex flex-col space-y-6 pl-12">
+					<a href="index.html" class="hover:text-black uppercase">la maison</a>
+					<a href="suites.html" class="hover:text-black uppercase"
+						>les suites</a
+					>
+					<a href="reglement.html" class="hover:text-orange uppercase"
+						>règlement</a
+					>
+				</div>
+				<!-- CTA BUTTON -->
+				<button
+					class="px-6 py-2 bg-secondary shadow-lg text-orange rounded-lg self-center hover:scale-110 text-white"
+				>
+					<a class="bg-secondary uppercase font-body" href="booking.html">
+						Réservez votre séjour
+					</a>
+				</button>
+				<!-- Mobile Social Container -->
+				<div class="flex items-end space-x-2 w-52 self-center">
+					<div
+						class="flex space-x-2 mx-auto w-full items-center justify-between"
+					>
+						<div class="group h-10">
+							<a href="https://fb.me/2mrXgeU9t" target="_blank">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
+										fill="black"
+									/>
+								</svg>
+							</a>
+						</div>
+
+						<div class="group h-10">
+							<a href="#" target="_blank">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M3.33334 9.99992C3.33334 6.31802 6.31811 3.33325 10 3.33325H30C33.6818 3.33325 36.6667 6.31802 36.6667 9.99992V29.9999C36.6667 33.6818 33.6818 36.6666 30 36.6666H10C6.31811 36.6666 3.33334 33.6818 3.33334 29.9999V9.99992ZM10 6.66659C8.15906 6.66659 6.66668 8.15897 6.66668 9.99992V29.9999C6.66668 31.8409 8.15906 33.3333 10 33.3333H30C31.841 33.3333 33.3333 31.8409 33.3333 29.9999V9.99992C33.3333 8.15897 31.841 6.66659 30 6.66659H10ZM20 14.9999C17.2385 14.9999 15 17.2384 15 19.9999C15 22.7614 17.2385 24.9999 20 24.9999C22.7615 24.9999 25 22.7614 25 19.9999C25 17.2384 22.7615 14.9999 20 14.9999ZM11.6667 19.9999C11.6667 15.3976 15.3976 11.6666 20 11.6666C24.6023 11.6666 28.3333 15.3976 28.3333 19.9999C28.3333 24.6023 24.6023 28.3333 20 28.3333C15.3976 28.3333 11.6667 24.6023 11.6667 19.9999ZM29.1667 13.3333C30.5473 13.3333 31.6667 12.214 31.6667 10.8333C31.6667 9.45254 30.5473 8.33325 29.1667 8.33325C27.786 8.33325 26.6667 9.45254 26.6667 10.8333C26.6667 12.214 27.786 13.3333 29.1667 13.3333Z"
+										fill="black"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Rules container -->
+		<section
+			class="container mx-auto my-14 max-w-7xl flex flex-col items-center"
+		>
+			<h1 class="uppercase text-3xl text-center">réservez en ligne</h1>
+			<div
+				class="my-16 bg-cover bg-no-repeat bg-center w-[1000px] h-[170px]"
+				style="background-image: url('./assets/tableau-prix.png')"
+			></div>
+			<form class="w-[65%] flex flex-col my-12 space-y-8">
+				<div class="flex flex-col justify-between space-y-1 py-4">
+					<label for="services" class="font-body uppercase"
+						>Type de prestation</label
+					>
+					<select
+						type="select"
+						class="w-48 py-1 px-4 h-auto bg-white font-body"
+					>
+						<option value="suites">Suites</option>
+						<option value="seminaire">Séminaire</option>
+						<option value="privatisation">privatisation</option>
+					</select>
+				</div>
+				<div class="flex flex-col space-y-4 md:flex-row justify-between">
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label for="services" class="font-body uppercase"
+							>Sélectionnez votre Suite</label
+						>
+						<select
+							type="select"
+							class="w-48 py-1 px-4 h-auto bg-white font-body"
+						>
+							<option value="chambre">Suite Bambou</option>
+							<option value="seminaire">Suite Rubis</option>
+							<option value="privatisation">Suite Turquoise</option>
+						</select>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label for="services" class="font-body uppercase"
+							>Nombre de voyageurs</label
+						>
+						<select
+							type="select"
+							class="w-48 py-1 px-4 h-auto bg-white font-body"
+						>
+							<option value="chambre">1-2 personnes</option>
+							<option value="seminaire">3-4 personnes</option>
+						</select>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname"
+							>Date d'arrivée</label
+						>
+						<input
+							class="w-[150px] py-1 px-4 h-auto bg-white font-body"
+							type="date"
+							placeholder="Entrer votre nom"
+						/>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname"
+							>Date de départ</label
+						>
+						<input
+							class="w-[150px] py-1 px-4 h-auto bg-white font-body"
+							type="date"
+							placeholder="Entrer votre nom"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col md:flex-row justify-between">
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname">Nom</label>
+						<input
+							class="w-[300px] py-1 px-4 h-auto bg-white font-body"
+							type="text"
+							placeholder="Entrer votre nom"
+						/>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="surname">Prénom</label>
+						<input
+							class="w-[300px] py-1 px-4 h-auto bg-white font-body"
+							type="text"
+							placeholder="Entrer votre prénom"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col md:flex-row justify-between">
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="email">email</label>
+						<input
+							class="w-[300px] py-1 px-4 h-auto bg-white font-body"
+							type="email"
+							placeholder="Entrer votre email"
+						/>
+					</div>
+					<div class="flex flex-col justify-between space-y-1 py-4">
+						<label class="font-body uppercase" for="phone">téléphone</label>
+						<input
+							class="w-[300px] py-1 px-4 h-auto bg-white font-body"
+							type="text"
+							placeholder="Entrer votre téléphone"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col justify-between space-y-1 py-4">
+					<label class="font-body uppercase" for="message">Message</label>
+					<textarea
+						class="bg-white font-body"
+						placeholder="Entrez votre message ici"
+						name="message"
+						id="message"
+						cols="30"
+						rows="15"
+					></textarea>
+				</div>
+				<button
+					class="font-body w-1/2 text-2xl text-white bg-secondary py-2 px-6 rounded-lg uppercase self-center"
+				>
+					envoyer
+				</button>
+			</form>
+			<div class="flex flex-col items-start justify-between space-y-8 my-16">
+				<div class="flex justify-between items-center space-x-6">
+					<svg
+						width="60"
+						height="60"
+						viewBox="0 0 60 60"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g clip-path="url(#clip0_11_5528)">
+							<path
+								d="M30 0C13.4575 0 0 13.4575 0 30C0 46.5425 13.4575 60 30 60C36.67 60 42.985 57.8575 48.325 53.75C50.445 51.89 50.4075 49.235 49.4275 47.43C48.8075 46.2875 47.8625 45.505 46.765 45.12L47.2675 44.5575C48.0175 43.715 48.3475 42.5925 48.17 41.48C47.995 40.3675 47.335 39.4 46.3625 38.8275L39.76 34.9625C38.2625 34.0875 36.2175 34.41 35.065 35.705L33.6 37.3525C33.36 37.6225 33.0275 37.7725 32.6675 37.7725C32.24 37.7725 31.86 37.5675 31.625 37.2125L23.5775 25.07C23.3725 24.7625 23.3175 24.395 23.4175 24.04C23.5175 23.6825 23.7575 23.4025 24.095 23.2475L26.3975 22.1775C28.015 21.43 28.885 19.6275 28.4675 17.8975L26.675 10.4625C26.14 8.24 23.545 6.9675 21.4525 7.94L19.3975 8.8925C16.36 10.3025 14.1225 12.965 13.2575 16.2L12.8825 17.61C12.205 20.1475 12.44 22.8575 13.545 25.24L15.3925 29.225C18.1025 35.0725 21.8025 40.3325 26.3875 44.8625L27.9125 46.3675C30.1775 48.605 33.175 49.895 36.3575 49.9975L36.77 50.005C39.525 50.005 42.18 49.0925 44.3475 47.46C44.39 47.4525 44.4325 47.4625 44.4775 47.45C46.1775 46.975 47.0175 48.23 47.2325 48.625C47.7375 49.56 47.7625 50.925 46.7425 51.825C41.9075 55.54 36.12 57.505 30.005 57.505C14.8425 57.505 2.505 45.1675 2.505 30.005C2.505 14.8425 14.8425 2.505 30.005 2.505C45.1675 2.505 57.505 14.8425 57.505 30.005C57.505 30.695 58.065 31.255 58.755 31.255C59.445 31.255 60.005 30.695 60.005 30.005C60 13.4575 46.54 0 30 0Z"
+								fill="black"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_11_5528">
+								<rect width="60" height="60" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+					<span class="text-2xl md:text-3xl uppercase"
+						>+33 (0)7 50 20 91 76</span
+					>
+				</div>
+				<div class="flex justify-between items-center space-x-6">
+					<svg
+						width="60"
+						height="60"
+						viewBox="0 0 60 60"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M53.75 10H6.25C2.805 10 0 12.805 0 16.25V43.75C0 47.195 2.805 50 6.25 50H53.75C57.195 50 60 47.195 60 43.75V16.25C60 12.805 57.195 10 53.75 10ZM22.05 32.21L7.05 44.71C6.8175 44.905 6.5325 45 6.25 45C5.89 45 5.535 44.8475 5.2875 44.55C4.845 44.02 4.9175 43.23 5.4475 42.7875L20.4475 30.2875C20.9775 29.8475 21.7675 29.92 22.21 30.4475C22.6525 30.98 22.58 31.77 22.05 32.21ZM30 32.5425C28.625 32.5425 27.2475 32.1325 26.0475 31.31L5.545 17.2825C4.975 16.8925 4.83 16.115 5.2175 15.545C5.605 14.975 6.3825 14.8275 6.955 15.22L27.4575 29.2475C29 30.3025 30.995 30.3025 32.54 29.2475L53.0425 15.22C53.615 14.8325 54.3925 14.975 54.78 15.545C55.17 16.115 55.025 16.8925 54.455 17.2825L33.9525 31.31C32.7525 32.1325 31.375 32.5425 30 32.5425ZM54.71 44.55C54.4625 44.8475 54.1075 45 53.75 45C53.4675 45 53.185 44.905 52.95 44.71L37.95 32.21C37.42 31.7675 37.3475 30.98 37.79 30.4475C38.2325 29.92 39.02 29.8475 39.5525 30.2875L54.5525 42.7875C55.08 43.23 55.1525 44.02 54.71 44.55Z"
+							fill="black"
+						/>
+					</svg>
+
+					<span class="text-2xl md:text-3xl"
+						>valerie@auxcouleursdalsace.fr</span
+					>
+				</div>
+			</div>
+		</section>
+		<!-- CTA Section -->
+		<section class="container mx-auto my-8 max-w-7xl flex justify-center">
+			<!-- CTA Container -->
+			<div
+				class="flex flex-col justify-around items-center w-3/4 h-auto my-4 py-8 border-t-[1px] border-b-[1px] border-secondary md:flex-row md:h-36 md:space-x-24"
+			>
+				<a
+					href="https://www.booking.com/hotel/fr/aux-couleurs-d-alsace-ostwald.fr.html?label=gen173bo-1DCAsoTUIdYXV4LWNvdWxldXJzLWQtYWxzYWNlLW9zdHdhbGRIM1gDaE2IAQGYAQ24ARjIAQzYAQPoAQGIAgGYAgaoAgS4Apbg9aQGwAIB0gIkYTRmZWZkNjgtOWUwZC00NjFhLTg1OWQtNjkxYjkyZmFlYjU22AIE4AIB&sid=ad6d02d0d4561620429d40247ba6f63c&dist=0&group_adults=2&group_children=0&no_rooms=1&sb_price_type=total&type=total&"
+					target="_blank"
+				>
+					<svg
+						width="259"
+						height="129"
+						viewBox="0 0 259 129"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<mask
+							id="mask0_11_5271"
+							style="mask-type: luminance"
+							maskUnits="userSpaceOnUse"
+							x="4"
+							y="43"
+							width="251"
+							height="43"
+						>
+							<path
+								d="M4.71631 43.0029H254.327V85.194H4.71631V43.0029Z"
+								fill="white"
+							/>
+						</mask>
+						<g mask="url(#mask0_11_5271)">
+							<mask
+								id="mask1_11_5271"
+								style="mask-type: luminance"
+								maskUnits="userSpaceOnUse"
+								x="4"
+								y="43"
+								width="251"
+								height="43"
+							>
+								<path
+									d="M4.71631 85.194H254.327V43.0029H4.71631V85.194Z"
+									fill="white"
+								/>
+							</mask>
+							<g mask="url(#mask1_11_5271)">
+								<path
+									d="M102.601 47.6206C102.601 46.6186 103 45.6575 103.712 44.9489C104.423 44.2403 105.388 43.8423 106.394 43.8423C107.4 43.8423 108.364 44.2403 109.076 44.9489C109.787 45.6575 110.187 46.6186 110.187 47.6206C110.15 48.5983 109.734 49.5238 109.027 50.2026C108.32 50.8814 107.376 51.2606 106.394 51.2606C105.412 51.2606 104.468 50.8814 103.76 50.2026C103.053 49.5238 102.637 48.5983 102.601 47.6206Z"
+									fill="#4A4A4A"
+								/>
+								<path
+									d="M162.447 72.8195C162.447 70.7225 164.143 69.0306 166.232 69.0306C166.985 69.027 167.722 69.2461 168.35 69.6602C168.978 70.0743 169.468 70.6648 169.759 71.3568C170.05 72.0488 170.128 72.8112 169.983 73.5474C169.838 74.2835 169.478 74.9604 168.946 75.4921C168.415 76.0238 167.738 76.3865 166.999 76.5342C166.261 76.6819 165.495 76.608 164.799 76.3218C164.103 76.0355 163.508 75.5499 163.089 74.9264C162.67 74.303 162.447 73.5697 162.447 72.8195Z"
+									fill="#8D8F8E"
+								/>
+								<path
+									d="M40.3751 71.1803C37.1103 71.1803 34.8387 68.5965 34.8387 64.9023C34.8387 61.2081 37.1103 58.6296 40.3777 58.6296C43.6609 58.6296 45.9563 61.2081 45.9563 64.9023C45.9563 68.6544 43.7112 71.1803 40.3751 71.1803ZM40.3751 53.112C33.4652 53.112 28.4492 58.0718 28.4492 64.8997C28.4492 71.7276 33.4679 76.6874 40.3751 76.6874C47.314 76.6874 52.3485 71.7302 52.3485 64.8997C52.3485 58.0691 47.3139 53.1067 40.3777 53.1067M95.2789 65.4891C95.0384 65.0257 94.7343 64.598 94.3754 64.2182L94.1642 63.9998L94.3861 63.7893C94.7346 63.4209 95.0526 63.0249 95.3369 62.6053L101.412 53.5751H94.0057L89.4228 60.6398C89.164 61.0187 88.6411 61.2081 87.8566 61.2081H86.8132V47.8522C86.8132 45.1816 85.1413 44.8185 83.3372 44.8185H80.2467L80.2547 76.3401H86.8158V66.8836H87.4313C88.1788 66.8836 88.686 66.9704 88.9211 67.3756L92.5398 74.1799C93.5515 76.027 94.5578 76.3374 96.4543 76.3374H101.481L97.7353 70.1699L95.2524 65.4864M127.1 53.0515C123.761 53.0515 121.632 54.5302 120.438 55.78L120.042 56.1799L119.899 55.6353C119.55 54.2934 118.367 53.5619 116.59 53.5619H113.65L113.668 76.3295H120.185V65.8364C120.185 64.8102 120.317 63.9209 120.591 63.1078C121.315 60.6477 123.338 59.119 125.866 59.119C127.9 59.119 128.692 60.1899 128.692 62.9526V72.8722C128.692 75.2297 129.788 76.3322 132.158 76.3322H135.259L135.248 61.8501C135.248 56.0984 132.43 53.0567 127.097 53.0567M106.494 53.5724H103.404L103.425 76.3401H106.719L106.835 76.3453L108.372 76.3401H109.899V76.3322H109.909L109.923 57.0324C109.923 54.7038 108.805 53.5724 106.494 53.5724ZM65.9622 71.1777C62.6974 71.1777 60.4233 68.5939 60.4233 64.8997C60.4233 61.2055 62.6947 58.6269 65.9648 58.6269C69.2348 58.6269 71.5434 61.2055 71.5434 64.8997C71.5434 68.6517 69.2956 71.1777 65.9622 71.1777ZM65.9622 53.1093C59.0471 53.1093 54.0284 58.0691 54.0284 64.897C54.0284 71.725 59.0471 76.6847 65.9675 76.6847C72.8879 76.6847 77.9408 71.7276 77.9408 64.897C77.9408 58.0665 72.9223 53.1041 65.9675 53.1041"
+									fill="#4A4A4A"
+								/>
+							</g>
+						</g>
+						<mask
+							id="mask2_11_5271"
+							style="mask-type: luminance"
+							maskUnits="userSpaceOnUse"
+							x="4"
+							y="43"
+							width="251"
+							height="43"
+						>
+							<path
+								d="M4.71631 43.0029H254.327V85.194H4.71631V43.0029Z"
+								fill="white"
+							/>
+						</mask>
+						<g mask="url(#mask2_11_5271)">
+							<mask
+								id="mask3_11_5271"
+								style="mask-type: luminance"
+								maskUnits="userSpaceOnUse"
+								x="4"
+								y="43"
+								width="251"
+								height="43"
+							>
+								<path
+									d="M4.71631 43.8344H254.274V85.1387H4.71631V43.8344Z"
+									fill="white"
+								/>
+							</mask>
+							<g mask="url(#mask3_11_5271)">
+								<mask
+									id="mask4_11_5271"
+									style="mask-type: luminance"
+									maskUnits="userSpaceOnUse"
+									x="4"
+									y="43"
+									width="251"
+									height="43"
+								>
+									<path
+										d="M4.71631 85.194H254.327V43.0029H4.71631V85.194Z"
+										fill="white"
+									/>
+								</mask>
+								<g mask="url(#mask4_11_5271)">
+									<path
+										d="M205.606 71.1803C202.342 71.1803 200.065 68.5965 200.065 64.9023C200.065 61.2081 202.342 58.6296 205.606 58.6296C208.887 58.6296 211.188 61.2081 211.188 64.9023C211.188 68.6544 208.942 71.1803 205.606 71.1803ZM205.606 53.112C198.691 53.112 193.675 58.0718 193.675 64.8997C193.675 71.7276 198.694 76.6874 205.606 76.6874C212.537 76.6874 217.58 71.7302 217.58 64.8997C217.58 58.0691 212.561 53.1067 205.606 53.1067"
+										fill="#8D8F8E"
+									/>
+									<path
+										d="M148.994 70.1778C145.428 70.1778 144.16 67.0835 144.16 64.1787C144.16 62.9 144.485 58.7322 148.65 58.7322C150.718 58.7322 153.473 59.3216 153.473 64.3892C153.473 69.1701 151.035 70.1726 148.991 70.1726L148.994 70.1778ZM156.86 53.5172C155.623 53.5172 154.672 54.0092 154.218 54.9064L154.039 55.2537L153.738 54.9906C152.686 54.0855 150.8 53.0093 147.742 53.0093C141.648 53.0093 137.546 57.5692 137.546 64.3498C137.546 71.1303 141.79 75.8638 147.863 75.8638C149.936 75.8638 151.577 75.3797 152.876 74.4009L153.405 74.0246V74.6561C153.405 77.6977 151.432 79.3764 147.853 79.3764C146.356 79.3586 144.873 79.0863 143.468 78.5713C142.089 78.1556 141.275 78.5003 140.721 79.8816L140.203 81.1551L139.471 83.018L139.92 83.2548C142.213 84.4651 145.195 85.1887 147.889 85.1887C153.436 85.1887 159.918 82.3602 159.918 74.4009L159.945 53.5172H156.86Z"
+										fill="#4A4A4A"
+									/>
+								</g>
+							</g>
+						</g>
+						<mask
+							id="mask5_11_5271"
+							style="mask-type: luminance"
+							maskUnits="userSpaceOnUse"
+							x="4"
+							y="43"
+							width="251"
+							height="43"
+						>
+							<path
+								d="M4.71631 43.0029H254.327V85.194H4.71631V43.0029Z"
+								fill="white"
+							/>
+						</mask>
+						<g mask="url(#mask5_11_5271)">
+							<mask
+								id="mask6_11_5271"
+								style="mask-type: luminance"
+								maskUnits="userSpaceOnUse"
+								x="4"
+								y="43"
+								width="251"
+								height="43"
+							>
+								<path
+									d="M4.71631 85.194H254.327V43.0029H4.71631V85.194Z"
+									fill="white"
+								/>
+							</mask>
+							<g mask="url(#mask6_11_5271)">
+								<path
+									d="M16.0873 70.9199L10.7834 70.9146V64.5998C10.7834 63.2473 11.3117 62.5474 12.4686 62.3843H16.0873C18.6679 62.3843 20.3136 64.0051 20.3136 66.6284C20.311 69.3227 18.6838 70.9172 16.0873 70.9172V70.9199ZM10.7834 53.8803V52.2174C10.7834 50.7624 11.4015 50.0704 12.7566 49.9809H15.4719C17.7963 49.9809 19.1698 51.3675 19.1698 53.6909C19.1698 55.459 18.2136 57.5245 15.5326 57.5245H10.7597L10.7834 53.8803ZM22.8599 60.1846L21.9009 59.6479L22.7383 58.9375C23.7156 58.1034 25.3428 56.2273 25.3428 52.991C25.3428 48.0338 21.4863 44.8343 15.5168 44.8343H7.92552C7.07133 44.8653 6.26176 45.2226 5.66477 45.8319C5.06779 46.4413 4.72904 47.2561 4.71875 48.1075V76.2349H15.6541C22.2919 76.2349 26.5762 72.6354 26.5762 67.0599C26.5762 64.0604 25.1921 61.4923 22.865 60.1873"
+									fill="#4A4A4A"
+								/>
+								<path
+									d="M246.685 53.1383C245.34 53.1432 244.013 53.4492 242.802 54.0335C241.592 54.6178 240.528 55.4655 239.691 56.5141L239.221 57.1088L238.851 56.4431C237.641 54.2513 235.565 53.1383 232.678 53.1383C229.648 53.1383 227.617 54.8223 226.674 55.8221L226.056 56.4878L225.792 55.6116C225.448 54.3486 224.321 53.6566 222.614 53.6566H219.875L219.849 76.3374H226.069V66.3258C226.073 65.4318 226.183 64.5414 226.399 63.6736C226.994 61.2529 228.626 58.648 231.37 58.9111C233.061 59.0742 233.89 60.3767 233.89 62.8921V76.3374H240.156V66.3258C240.132 65.4003 240.25 64.4766 240.507 63.5867C241.035 61.2765 242.715 58.9085 245.362 58.9085C247.279 58.9085 247.987 59.9873 247.987 62.8921V73.0221C247.987 75.3113 249.012 76.3374 251.315 76.3374H254.242L254.247 61.858C254.247 56.0694 251.691 53.1383 246.661 53.1383M190.046 68.4623C190.027 68.4886 187.352 71.2961 183.826 71.2961C180.614 71.2961 177.37 69.3332 177.37 64.9549C177.37 61.1713 179.885 58.527 183.488 58.527C184.655 58.527 185.986 58.9427 186.195 59.6452L186.221 59.7636C186.354 60.2473 186.644 60.6737 187.045 60.9767C187.446 61.2797 187.937 61.4425 188.44 61.4397L191.874 61.4449V58.477C191.874 54.5618 186.874 53.1409 183.511 53.1409C176.316 53.1409 171.097 58.1297 171.097 65.0023C171.097 71.875 176.258 76.8531 183.379 76.8531C189.555 76.8531 192.888 72.809 192.946 72.7696L193.126 72.5485L190.426 68.0887L190.07 68.4649"
+									fill="#8D8F8E"
+								/>
+							</g>
+						</g>
+					</svg>
+				</a>
+				<svg
+					width="253"
+					height="84"
+					viewBox="0 0 253 84"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g clip-path="url(#clip0_11_5308)" filter="url(#filter0_d_11_5308)">
+						<path
+							d="M133.121 19.0954C133.121 21.8344 130.901 24.0399 128.146 24.0399C125.392 24.0399 123.173 21.8344 123.173 19.0954C123.173 16.3564 125.316 14.1509 128.146 14.1509C130.979 14.2269 133.121 16.4332 133.121 19.0954ZM112.614 29.0619V30.2794C112.614 30.2794 110.243 27.2348 105.193 27.2348C96.8534 27.2348 90.3484 33.5496 90.3484 42.2978C90.3484 50.9707 96.7769 57.3606 105.193 57.3606C110.32 57.3606 112.614 54.2417 112.614 54.2417V55.5344C112.614 56.1432 113.074 56.5984 113.686 56.5984H119.883V27.9933H113.686C113.074 27.9956 112.614 28.5291 112.614 29.0619ZM112.614 47.395C111.468 49.0692 109.171 50.5147 106.417 50.5147C101.521 50.5147 97.7706 47.4717 97.7706 42.2978C97.7706 37.1245 101.521 34.0816 106.417 34.0816C109.096 34.0816 111.544 35.603 112.614 37.2005V47.395ZM124.474 27.9956H131.819V56.6006H124.474V27.9956ZM234.198 27.2341C229.148 27.2341 226.775 30.2786 226.775 30.2786V14.2269H219.43V56.6006H225.628C226.241 56.6006 226.699 56.0679 226.699 55.5352V54.2424C226.699 54.2424 229.071 57.3614 234.12 57.3614C242.461 57.3614 248.964 50.973 248.964 42.3C248.964 33.6271 242.461 27.2341 234.198 27.2341ZM232.973 50.4379C230.141 50.4379 227.923 48.994 226.775 47.319V37.1245C227.923 35.603 230.371 34.0056 232.973 34.0056C237.87 34.0056 241.619 37.0485 241.619 42.2217C241.619 47.395 237.871 50.4379 232.973 50.4379ZM215.605 39.6363V56.6767H208.259V40.4723C208.259 35.7566 206.728 33.8536 202.599 33.8536C200.381 33.8536 198.085 34.9951 196.628 36.6693V56.6014H189.285V27.9964H195.098C195.71 27.9964 196.17 28.5291 196.17 29.0619V30.2794C198.312 28.0724 201.143 27.2348 203.973 27.2348C207.188 27.2348 209.866 28.1491 212.009 29.9746C214.609 32.1048 215.605 34.8431 215.605 39.6363ZM171.454 27.2341C166.405 27.2341 164.033 30.2786 164.033 30.2786V14.2269H156.688V56.6006H162.885C163.497 56.6006 163.956 56.0679 163.956 55.5352V54.2424C163.956 54.2424 166.329 57.3614 171.378 57.3614C179.719 57.3614 186.222 50.973 186.222 42.3C186.299 33.6263 179.795 27.2341 171.454 27.2341ZM170.23 50.4379C167.399 50.4379 165.181 48.994 164.033 47.319V37.1245C165.181 35.603 167.629 34.0056 170.23 34.0056C175.128 34.0056 178.876 37.0485 178.876 42.2217C178.876 47.395 175.128 50.4379 170.23 50.4379ZM150.337 27.2341C152.555 27.2341 153.703 27.6156 153.703 27.6156V34.3855C153.703 34.3855 147.582 32.3313 143.757 36.6685V56.6759H136.41V27.9956H142.609C143.221 27.9956 143.679 28.5284 143.679 29.0611V30.2786C145.058 28.6803 148.042 27.2341 150.337 27.2341ZM74.0517 54.0137C73.6695 53.1009 73.2866 52.1122 72.9044 51.2747C72.2914 49.906 71.6791 48.6117 71.1448 47.395L71.0684 47.319C65.788 35.907 60.1269 24.3446 54.1579 12.9342L53.9286 12.4767C53.3007 11.293 52.6889 10.101 52.0933 8.90098C51.3274 7.53073 50.563 6.08675 49.3384 4.71649C46.8901 1.67351 43.3701 -0.000732422 39.6216 -0.000732422C35.7951 -0.000732422 32.3523 1.67352 29.8283 4.56375C28.6802 5.93248 27.8378 7.37798 27.0734 8.74823C26.4763 9.94749 25.8645 11.1395 25.2381 12.3239L25.0081 12.7815C19.1162 24.1919 13.3779 35.755 8.09835 47.1662L8.02116 47.3175C7.48609 48.5365 6.87304 49.8292 6.26077 51.1972C5.87858 52.0347 5.49639 52.9474 5.11419 53.9362C4.11896 56.7504 3.81243 59.4134 4.19615 62.1531C5.03774 67.8591 8.86272 72.65 14.1431 74.7818C16.1328 75.6193 18.1989 75.9993 20.3407 75.9993C20.953 75.9993 21.7174 75.9233 22.3304 75.8465C24.856 75.5425 27.4572 74.7065 29.9827 73.261C33.1197 71.5108 36.1039 69.0013 39.4702 65.3496C42.8366 69.0013 45.8972 71.5108 48.9578 73.261C51.4841 74.7065 54.0845 75.5425 56.6092 75.8465C57.2215 75.924 57.9874 75.9993 58.5997 75.9993C60.7423 75.9993 62.8841 75.6193 64.7966 74.7818C70.1534 72.65 73.9019 67.7831 74.7443 62.1531C75.352 59.4909 75.0462 56.8294 74.0517 54.0137ZM39.5444 57.9694C35.4121 52.7962 32.7337 47.9277 31.8164 43.8208C31.4342 42.0705 31.357 40.549 31.5871 39.1795C31.7392 37.962 32.1994 36.8965 32.8117 35.9838C34.2655 33.9311 36.7139 32.6368 39.5451 32.6368C42.3772 32.6368 44.902 33.8543 46.2794 35.9838C46.8916 36.8965 47.3503 37.9628 47.5047 39.1795C47.7332 40.5498 47.6568 42.1465 47.2746 43.8208C46.3535 47.8517 43.6751 52.7209 39.5444 57.9694ZM70.0724 61.5451C69.5373 65.5009 66.8589 68.9253 63.1103 70.4468C61.2743 71.2068 59.2838 71.4355 57.2957 71.2068C55.3832 70.978 53.4692 70.3693 51.481 69.2293C48.7262 67.7063 45.9721 65.3496 42.7579 61.8491C47.8074 55.6879 50.868 50.0572 52.0161 45.0375C52.5519 42.6785 52.6291 40.549 52.3983 38.57C52.0933 36.6685 51.4038 34.9183 50.3329 33.3968C47.9595 29.9723 43.9801 27.9956 39.5436 27.9956C35.1071 27.9956 31.1277 30.0498 28.7558 33.3968C27.6849 34.9183 26.9955 36.6685 26.6897 38.57C26.3839 40.549 26.4596 42.7545 27.0719 45.0375C28.2192 50.0572 31.3563 55.7632 36.3294 61.9251C33.1923 65.4249 30.361 67.7839 27.6062 69.3053C25.6165 70.4468 23.7048 71.0556 21.7923 71.2828C19.7269 71.5116 17.7365 71.2068 15.9769 70.5228C12.2283 69.0013 9.54992 65.5768 9.01485 61.6211C8.78553 59.7196 8.93764 57.8181 9.70356 55.6879C9.93211 54.9264 10.3158 54.1664 10.698 53.2537C11.2339 52.0362 11.8446 50.7419 12.4576 49.4492L12.5348 49.298C17.8137 37.962 23.4755 26.3989 29.3674 15.1404L29.5967 14.6829C30.2097 13.543 30.822 12.3255 31.4335 11.184C32.0458 9.96648 32.7337 8.82497 33.576 7.83547C35.1828 6.01151 37.3246 5.02125 39.6972 5.02125C42.0699 5.02125 44.2117 6.01151 45.8185 7.83547C46.6608 8.82725 47.3487 9.96876 47.961 11.184C48.574 12.3255 49.1863 13.543 49.7971 14.6829L50.0271 15.1404C55.8292 26.4456 61.4158 37.8589 66.784 49.374V49.45C67.397 50.669 67.9321 52.037 68.5444 53.256C68.9266 54.1672 69.3095 54.9272 69.5388 55.6887C70.1496 57.6647 70.3789 59.5677 70.0724 61.5451Z"
+							fill="#4A4A4A"
+						/>
+					</g>
+					<defs>
+						<filter
+							id="filter0_d_11_5308"
+							x="0"
+							y="0"
+							width="253"
+							height="84"
+							filterUnits="userSpaceOnUse"
+							color-interpolation-filters="sRGB"
+						>
+							<feFlood flood-opacity="0" result="BackgroundImageFix" />
+							<feColorMatrix
+								in="SourceAlpha"
+								type="matrix"
+								values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+								result="hardAlpha"
+							/>
+							<feOffset dy="4" />
+							<feGaussianBlur stdDeviation="2" />
+							<feComposite in2="hardAlpha" operator="out" />
+							<feColorMatrix
+								type="matrix"
+								values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+							/>
+							<feBlend
+								mode="normal"
+								in2="BackgroundImageFix"
+								result="effect1_dropShadow_11_5308"
+							/>
+							<feBlend
+								mode="normal"
+								in="SourceGraphic"
+								in2="effect1_dropShadow_11_5308"
+								result="shape"
+							/>
+						</filter>
+						<clipPath id="clip0_11_5308">
+							<rect
+								width="245"
+								height="76"
+								fill="white"
+								transform="translate(4)"
+							/>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+		</section>
+		<section
+			class="container mx-auto mt-12 max-w-7xl overflow-hidden flex justify-center"
+		>
+			<!-- Footer Container -->
+			<div class="flex flex-col justify-between items-center space-y-6">
+				<img class="w-[150px] h-auto" src="./assets/logo.png" alt="logo" />
+				<!-- Info Container -->
+				<div class="flex flex-col justify-between space-y-3 text-center">
+					<span>5 rue de Bourgogne 67570 OSTWALD</span>
+					<span>+33 (0)7 50 20 91 76</span>
+				</div>
+				<!-- Socials Container -->
+				<div class="w-full flex justify-between space-x-3 px-12">
+					<a href="https://fb.me/2mrXgeU9t" target="_blank">
+						<svg
+							width="40"
+							height="40"
+							viewBox="0 0 40 40"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20 3.3999C10.8333 3.3999 3.33333 10.8832 3.33333 20.0999C3.33333 28.4333 9.43333 35.3499 17.4 36.5999V24.9333H13.1667V20.0999H17.4V16.4166C17.4 12.2332 19.8833 9.93324 23.7 9.93324C25.5167 9.93324 27.4167 10.2499 27.4167 10.2499V14.3666H25.3167C23.25 14.3666 22.6 15.6499 22.6 16.9666V20.0999H27.2333L26.4833 24.9333H22.6V36.5999C26.5273 35.9796 30.1037 33.9758 32.6832 30.9499C35.2627 27.9243 36.6757 24.0759 36.6667 20.0999C36.6667 10.8832 29.1667 3.3999 20 3.3999Z"
+								fill="black"
+							/>
+						</svg>
+					</a>
+					<svg
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M3.33334 9.99992C3.33334 6.31802 6.31811 3.33325 10 3.33325H30C33.6818 3.33325 36.6667 6.31802 36.6667 9.99992V29.9999C36.6667 33.6818 33.6818 36.6666 30 36.6666H10C6.31811 36.6666 3.33334 33.6818 3.33334 29.9999V9.99992ZM10 6.66659C8.15906 6.66659 6.66668 8.15897 6.66668 9.99992V29.9999C6.66668 31.8409 8.15906 33.3333 10 33.3333H30C31.841 33.3333 33.3333 31.8409 33.3333 29.9999V9.99992C33.3333 8.15897 31.841 6.66659 30 6.66659H10ZM20 14.9999C17.2385 14.9999 15 17.2384 15 19.9999C15 22.7614 17.2385 24.9999 20 24.9999C22.7615 24.9999 25 22.7614 25 19.9999C25 17.2384 22.7615 14.9999 20 14.9999ZM11.6667 19.9999C11.6667 15.3976 15.3976 11.6666 20 11.6666C24.6023 11.6666 28.3333 15.3976 28.3333 19.9999C28.3333 24.6023 24.6023 28.3333 20 28.3333C15.3976 28.3333 11.6667 24.6023 11.6667 19.9999ZM29.1667 13.3333C30.5473 13.3333 31.6667 12.214 31.6667 10.8333C31.6667 9.45254 30.5473 8.33325 29.1667 8.33325C27.786 8.33325 26.6667 9.45254 26.6667 10.8333C26.6667 12.214 27.786 13.3333 29.1667 13.3333Z"
+							fill="black"
+						/>
+					</svg>
+				</div>
+				<span class="pb-2"
+					>&copy; Aux couleurs d'Alsace - <a href="#">Mentions Légales</a></span
+				>
+			</div>
+		</section>
+	</body>
+</html>
