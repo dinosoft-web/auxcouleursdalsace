@@ -137,22 +137,30 @@
 			class="container mx-auto my-14 max-w-7xl flex flex-col items-center"
 		>
 			<h1 class="uppercase text-3xl text-center">formulaire de contact</h1>
-			<div class="w-3/4 flex flex-col my-16 space-y-8">
+			<form
+				class="w-3/4 flex flex-col my-16 space-y-8"
+				method="post"
+				action="contact-form-process.php"
+			>
 				<div class="flex flex-col md:flex-row justify-between">
 					<div class="flex flex-col justify-between space-y-1 py-4">
-						<label class="font-body uppercase" for="surname">nom</label>
+						<label class="font-body uppercase" for="name">nom</label>
 						<input
 							class="w-48 py-1 px-4 h-auto bg-white font-body"
 							type="text"
 							placeholder="Entrer votre nom"
+							id="name"
+							required
 						/>
 					</div>
 					<div class="flex flex-col justify-between space-y-1 py-4">
-						<label class="font-body uppercase" for="surname">Prénom</label>
+						<label class="font-body uppercase" for="firstname">Prénom</label>
 						<input
 							class="w-48 py-1 px-4 h-auto bg-white font-body"
 							type="text"
 							placeholder="Entrer votre prénom"
+							id="firstname"
+							required
 						/>
 					</div>
 					<div class="flex flex-col justify-between space-y-1 py-4">
@@ -161,6 +169,8 @@
 							class="w-48 py-1 px-4 h-auto bg-white font-body"
 							type="email"
 							placeholder="Entrer votre email"
+							id="email"
+							required
 						/>
 					</div>
 				</div>
@@ -173,14 +183,16 @@
 						id="message"
 						cols="30"
 						rows="15"
+						required
 					></textarea>
 				</div>
 				<button
 					class="font-body w-1/2 text-2xl text-white bg-secondary py-2 px-6 rounded-lg uppercase self-center"
+					type="submit"
 				>
 					envoyer
 				</button>
-			</div>
+			</form>
 		</section>
 		<section
 			class="container mx-auto mt-12 max-w-7xl overflow-hidden flex justify-center"

@@ -737,6 +737,10 @@ video {
   height: 100%;
 }
 
+.h-\[580px\] {
+  height: 580px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -803,6 +807,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[1180px\] {
+  width: 1180px;
 }
 
 .max-w-7xl {
@@ -1002,6 +1010,10 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
